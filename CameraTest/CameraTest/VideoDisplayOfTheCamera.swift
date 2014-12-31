@@ -11,59 +11,60 @@ import UIKit
 import AVFoundation
 
 class VideoDisplayOfTheCamera {
+    class _Base {
+        var _session: AVCaptureSession?
 
-    var _session: AVCaptureSession?
+        init(layer: CALayer, frame: CGRect, position: AVCaptureDevicePosition) {
+            // init camera device
+            var captureDevice: AVCaptureDevice?
+            let devices = AVCaptureDevice.devices()
 
-    init(layer: CALayer, frame: CGRect, position: AVCaptureDevicePosition) {
-        // init camera device
-        var captureDevice: AVCaptureDevice?
-        let devices = AVCaptureDevice.devices()
-
-        for device in devices {
-            if device.position == position {
-                captureDevice = device as? AVCaptureDevice
+            for device in devices {
+                if device.position == position {
+                    captureDevice = device as? AVCaptureDevice
+                }
             }
-        }
 
-        if captureDevice != nil {
-            println(captureDevice!.localizedName)
-            println(captureDevice!.modelID)
-        } else {
-            println("Missing Camera")
-            return
-        }
+            if captureDevice != nil {
+                println(captureDevice!.localizedName)
+                println(captureDevice!.modelID)
+            } else {
+                println("Missing Camera")
+                return
+            }
 
-        // init device input
-        var error: NSErrorPointer!
-        let deviceInput = AVCaptureDeviceInput.deviceInputWithDevice(
-            captureDevice,
-            error: error) as AVCaptureInput
+            // init device input
+            var error: NSErrorPointer!
+            let deviceInput = AVCaptureDeviceInput.deviceInputWithDevice(
+                captureDevice,
+                error: error) as AVCaptureInput
 
-        let stillImageOutput = AVCaptureStillImageOutput()
-        self._session = AVCaptureSession()
+            let stillImageOutput = AVCaptureStillImageOutput()
+            self._session = AVCaptureSession()
 
-        // init session
-        self._session!.sessionPreset = AVCaptureSessionPresetPhoto
-        self._session?.addInput(deviceInput)
-        self._session?.addOutput(stillImageOutput)
+            // init session
+            self._session!.sessionPreset = AVCaptureSessionPresetPhoto
+            self._session?.addInput(deviceInput)
+            self._session?.addOutput(stillImageOutput)
 
-        // layer for preview
-        var previewLayer =
+            // layer for preview
+            var previewLayer =
             AVCaptureVideoPreviewLayer.layerWithSession(self._session)
-            as AVCaptureVideoPreviewLayer
-        previewLayer.frame = frame
-        layer.addSublayer(previewLayer)
+                as AVCaptureVideoPreviewLayer
+            previewLayer.frame = frame
+            layer.addSublayer(previewLayer)
+        }
+        
+        func start() {
+            self._session?.startRunning()
+        }
+        
+        func stop() {
+            self._session?.stopRunning()
+        }
     }
 
-    func start() {
-        self._session?.startRunning()
-    }
-
-    func stop() {
-        self._session?.stopRunning()
-    }
-
-    class Back: VideoDisplayOfTheCamera  {
+    class Back: _Base {
         init(layer: CALayer, frame: CGRect) {
             super.init(
                 layer: layer,
@@ -72,7 +73,7 @@ class VideoDisplayOfTheCamera {
         }
     }
 
-    class Front: VideoDisplayOfTheCamera {
+    class Front: _Base {
         init(layer: CALayer, frame: CGRect) {
             super.init(
                 layer: layer,
