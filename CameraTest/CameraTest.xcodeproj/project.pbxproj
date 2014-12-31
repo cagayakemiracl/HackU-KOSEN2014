@@ -80,12 +80,12 @@
 			isa = PBXGroup;
 			children = (
 				011F682F1A527C420071D5FD /* AppDelegate.swift */,
+				011F684F1A5291BA0071D5FD /* VideoDisplayOfTheCamera.swift */,
 				011F68311A527C420071D5FD /* ViewController.swift */,
-				011F68331A527C420071D5FD /* Main.storyboard */,
 				011F68361A527C420071D5FD /* Images.xcassets */,
 				011F68381A527C420071D5FD /* LaunchScreen.xib */,
+				011F68331A527C420071D5FD /* Main.storyboard */,
 				011F682D1A527C420071D5FD /* Supporting Files */,
-				011F684F1A5291BA0071D5FD /* VideoDisplayOfTheCamera.swift */,
 			);
 			path = CameraTest;
 			sourceTree = "<group>";
@@ -411,6 +411,7 @@
 				011F684B1A527C420071D5FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		011F684C1A527C420071D5FD /* Build configuration list for PBXNativeTarget "CameraTestTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +420,7 @@
 				011F684E1A527C420071D5FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
