@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -16,10 +15,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
 
         // Start Camera
-        let videoDisplayOfTheCamera = VideoDisplayOfTheCamera(
+        let videoDisplayOfTheCamera = VideoDisplayOfTheCamera.Front(
             layer: self.view.layer,
-            frame: self.view.bounds,
-            position: AVCaptureDevicePosition.Front)
+            frame: self.view.bounds)
         videoDisplayOfTheCamera.start()
     }
 

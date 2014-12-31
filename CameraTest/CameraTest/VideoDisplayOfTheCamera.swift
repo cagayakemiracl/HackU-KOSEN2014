@@ -62,4 +62,22 @@ class VideoDisplayOfTheCamera {
     func stop() {
         self._session?.stopRunning()
     }
+
+    class Back: VideoDisplayOfTheCamera  {
+        init(layer: CALayer, frame: CGRect) {
+            super.init(
+                layer: layer,
+                frame: frame,
+                position: AVCaptureDevicePosition.Back)
+        }
+    }
+
+    class Front: VideoDisplayOfTheCamera {
+        init(layer: CALayer, frame: CGRect) {
+            super.init(
+                layer: layer,
+                frame: frame,
+                position: AVCaptureDevicePosition.Front)
+        }
+    }
 }
