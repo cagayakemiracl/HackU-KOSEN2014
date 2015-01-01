@@ -43,13 +43,13 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xrR-S6-enq" id="wRZ-LM-SYS">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="メイクの名前" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXG-ly-FGX">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メイクの名前" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXG-ly-FGX">
                                                     <rect key="frame" x="121" y="20" width="150" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="投稿日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGL-JK-NCV">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="投稿日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGL-JK-NCV">
                                                     <rect key="frame" x="121" y="89" width="51" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -62,18 +62,23 @@
                                                         <constraint firstAttribute="width" constant="80" id="TkZ-C8-Uzr"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="作者名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZA-Vr-Ebw">
-                                                    <rect key="frame" x="121" y="63" width="51" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作者名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZA-Vr-Ebw">
+                                                    <rect key="frame" x="121" y="60" width="51" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="QGL-JK-NCV" firstAttribute="top" secondItem="4ZA-Vr-Ebw" secondAttribute="bottom" constant="8" id="1H2-0W-A1m"/>
                                                 <constraint firstItem="VGm-8s-JRO" firstAttribute="leading" secondItem="wRZ-LM-SYS" secondAttribute="leadingMargin" constant="2" id="4qw-VH-XMM"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="VGm-8s-JRO" secondAttribute="bottom" constant="24" id="8Is-hU-Yg6"/>
                                                 <constraint firstItem="4ZA-Vr-Ebw" firstAttribute="leading" secondItem="VGm-8s-JRO" secondAttribute="trailing" constant="31" id="Djk-Oz-f3u"/>
                                                 <constraint firstItem="VGm-8s-JRO" firstAttribute="top" secondItem="wRZ-LM-SYS" secondAttribute="topMargin" constant="22" id="FZZ-rh-HUR"/>
+                                                <constraint firstItem="lXG-ly-FGX" firstAttribute="top" secondItem="wRZ-LM-SYS" secondAttribute="topMargin" constant="12" id="RKn-3G-XUV"/>
+                                                <constraint firstItem="QGL-JK-NCV" firstAttribute="leading" secondItem="VGm-8s-JRO" secondAttribute="trailing" constant="31" id="V6l-0u-s78"/>
+                                                <constraint firstItem="4ZA-Vr-Ebw" firstAttribute="top" secondItem="lXG-ly-FGX" secondAttribute="bottom" constant="10" id="iXz-9x-xyp"/>
+                                                <constraint firstItem="lXG-ly-FGX" firstAttribute="leading" secondItem="VGm-8s-JRO" secondAttribute="trailing" constant="31" id="jg6-NG-NNs"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
