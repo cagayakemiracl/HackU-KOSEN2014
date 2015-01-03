@@ -13,7 +13,7 @@ import Twitter
 
 class RestaurantTableViewController: UITableViewController {
     
-    @IBAction func Share2Facebook(){
+    /*@IBAction func Share2Facebook(){
         var Share2Facebook : SLComposeServiceViewController = SLComposeServiceViewController(forServiceType:SLServiceTypeFacebook)
         self.presentViewController(Share2Facebook, animated: true, completion: nil)
         
@@ -23,8 +23,8 @@ class RestaurantTableViewController: UITableViewController {
         var Share2Twitter : SLComposeServiceViewController = SLComposeServiceViewController(forServiceType:SLServiceTypeTwitter)
         self.presentViewController(Share2Twitter, animated: true, completion: nil)
         
-    }
-    */
+    }*/
+
     
     
     func tweet(message: String? = nil, image: UIImage? = nil, url: NSURL? = nil) {
@@ -202,7 +202,4 @@ class RestaurantTableViewController: UITableViewController {
 
         return [deleteAction, shareAction]
     }
-
-    
-
 }
