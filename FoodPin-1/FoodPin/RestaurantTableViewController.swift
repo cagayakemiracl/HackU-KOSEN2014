@@ -12,48 +12,6 @@ import Social
 import Twitter
 
 class RestaurantTableViewController: UITableViewController {
-    
-    /*@IBAction func Share2Facebook(){
-        var Share2Facebook : SLComposeServiceViewController = SLComposeServiceViewController(forServiceType:SLServiceTypeFacebook)
-        self.presentViewController(Share2Facebook, animated: true, completion: nil)
-        
-    }
-    
-    @IBAction func Share2Twitter(){
-        var Share2Twitter : SLComposeServiceViewController = SLComposeServiceViewController(forServiceType:SLServiceTypeTwitter)
-        self.presentViewController(Share2Twitter, animated: true, completion: nil)
-        
-    }*/
-
-    
-    
-    func tweet(message: String? = nil, image: UIImage? = nil, url: NSURL? = nil) {
-        
-        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
-            let controller = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-            controller.setInitialText(message)
-            controller.addImage(image)
-            controller.addURL(url)
-            controller.completionHandler = { (result:SLComposeViewControllerResult) -> Void in
-                switch result {
-                case SLComposeViewControllerResult.Cancelled:
-                    NSLog("result: cancelled")
-                case SLComposeViewControllerResult.Done:
-                    // TODO: ADD SOME CODE FOR SUCCESS
-                    NSLog("result: done")
-                }
-            }
-            
-            self.presentViewController(controller, animated: true, completion: { () -> Void in
-                // controller is presented... do something if needed
-            })
-        } else {
-            NSLog("Twitter is not available")
-        }
-        
-    }
-    
-    
     var restaurantNames = ["すっぴんメイク","ひげ男メイク","メガネメイク"]
     
     var restaurantImages = ["manome.png","reon.png","nakahara.png"]
@@ -166,20 +124,8 @@ class RestaurantTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject] {
         
         var shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Share", handler: { (action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
-
-            let shareMenu = UIAlertController(title: nil, message: "Share using", preferredStyle: .ActionSheet)
-            let twitterAction = UIAlertAction(title: "Twitter", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in println("Foo")})
-            let facebookAction = UIAlertAction(title: "Facebook", style: UIAlertActionStyle.Default, handler: nil)
-            let emailAction = UIAlertAction(title: "Email", style: UIAlertActionStyle.Default, handler: nil)
-            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
-            
-            //shareMenu.addAction(twitterAction)
-            shareMenu.addAction(twitterAction)
-            shareMenu.addAction(facebookAction)
-            shareMenu.addAction(emailAction)
-            shareMenu.addAction(cancelAction)
-            
-            self.presentViewController(shareMenu, animated: true, completion: nil)
+                let activityViewController = UIActivityViewController(activityItems: ["メイクアプリの投稿"], applicationActivities: nil)
+                self.presentViewController(activityViewController, animated: true, completion: nil)
             }
         )
         
