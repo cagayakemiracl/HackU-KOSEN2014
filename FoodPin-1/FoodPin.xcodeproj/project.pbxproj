@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		375EFCEE1A55697100504AC9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375EFCED1A55697100504AC9 /* Social.framework */; };
-		375EFCF01A55698200504AC9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375EFCEF1A55698200504AC9 /* QuartzCore.framework */; };
-		375EFCF21A556CCC00504AC9 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375EFCF11A556CCC00504AC9 /* Twitter.framework */; };
 		F4444CA319989F2800977F20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4444CA219989F2800977F20 /* AppDelegate.swift */; };
 		F4444CA819989F2800977F20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4444CA619989F2800977F20 /* Main.storyboard */; };
 		F4444CAA19989F2900977F20 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4444CA919989F2900977F20 /* Images.xcassets */; };
@@ -29,9 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		375EFCED1A55697100504AC9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		375EFCEF1A55698200504AC9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		375EFCF11A556CCC00504AC9 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		01DA589C1A582A53001D543C /* shareTwitter.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = shareTwitter.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4444C9D19989F2800977F20 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4444CA119989F2800977F20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4444CA219989F2800977F20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,13 +40,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		01DA58991A582A53001D543C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4444C9A19989F2800977F20 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				375EFCF21A556CCC00504AC9 /* Twitter.framework in Frameworks */,
-				375EFCF01A55698200504AC9 /* QuartzCore.framework in Frameworks */,
-				375EFCEE1A55697100504AC9 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,9 +67,6 @@
 		F4444C9419989F2800977F20 = {
 			isa = PBXGroup;
 			children = (
-				375EFCF11A556CCC00504AC9 /* Twitter.framework */,
-				375EFCEF1A55698200504AC9 /* QuartzCore.framework */,
-				375EFCED1A55697100504AC9 /* Social.framework */,
 				F4444C9F19989F2800977F20 /* FoodPin */,
 				F4444CB219989F2900977F20 /* FoodPinTests */,
 				F4444C9E19989F2800977F20 /* Products */,
@@ -82,6 +78,7 @@
 			children = (
 				F4444C9D19989F2800977F20 /* FoodPin.app */,
 				F4444CAF19989F2900977F20 /* FoodPinTests.xctest */,
+				01DA589C1A582A53001D543C /* shareTwitter.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +124,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		01DA589B1A582A53001D543C /* shareTwitter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01DA58A91A582A54001D543C /* Build configuration list for PBXNativeTarget "shareTwitter" */;
+			buildPhases = (
+				01DA58981A582A53001D543C /* Sources */,
+				01DA58991A582A53001D543C /* Frameworks */,
+				01DA589A1A582A53001D543C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = shareTwitter;
+			productName = shareTwitter;
+			productReference = 01DA589C1A582A53001D543C /* shareTwitter.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		F4444C9C19989F2800977F20 /* FoodPin */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4444CB919989F2900977F20 /* Build configuration list for PBXNativeTarget "FoodPin" */;
@@ -171,6 +185,9 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = AppCoda;
 				TargetAttributes = {
+					01DA589B1A582A53001D543C = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 					F4444C9C19989F2800977F20 = {
 						CreatedOnToolsVersion = 6.0;
 					};
@@ -195,11 +212,19 @@
 			targets = (
 				F4444C9C19989F2800977F20 /* FoodPin */,
 				F4444CAE19989F2900977F20 /* FoodPinTests */,
+				01DA589B1A582A53001D543C /* shareTwitter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		01DA589A1A582A53001D543C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4444C9B19989F2800977F20 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -219,6 +244,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		01DA58981A582A53001D543C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4444C9919989F2800977F20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -259,6 +291,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		01DA58A71A582A54001D543C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = shareTwitter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		01DA58A81A582A54001D543C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = shareTwitter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		F4444CB719989F2900977F20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -395,6 +453,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		01DA58A91A582A54001D543C /* Build configuration list for PBXNativeTarget "shareTwitter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01DA58A71A582A54001D543C /* Debug */,
+				01DA58A81A582A54001D543C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F4444C9819989F2800977F20 /* Build configuration list for PBXProject "FoodPin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

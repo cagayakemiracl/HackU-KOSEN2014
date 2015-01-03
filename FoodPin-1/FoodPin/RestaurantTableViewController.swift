@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import QuartzCore
-import Social
-import Twitter
 
 class RestaurantTableViewController: UITableViewController {
     var restaurantNames = ["すっぴんメイク","ひげ男メイク","メガネメイク"]
@@ -124,7 +121,8 @@ class RestaurantTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject] {
         
         var shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Share", handler: { (action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
-                let activityViewController = UIActivityViewController(activityItems: ["メイクアプリの投稿"], applicationActivities: nil)
+                let postString = self.restaurantNames[indexPath.row] + "をシェアしました!!"
+                let activityViewController = UIActivityViewController(activityItems: [postString], applicationActivities: nil)
                 self.presentViewController(activityViewController, animated: true, completion: nil)
             }
         )
