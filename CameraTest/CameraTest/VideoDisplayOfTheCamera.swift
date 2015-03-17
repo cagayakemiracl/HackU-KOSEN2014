@@ -34,7 +34,7 @@ class VideoDisplayOfTheCamera {
             }
 
             // init device input
-            var error: NSErrorPointer!
+            var error: NSErrorPointer = nil
             let deviceInput = AVCaptureDeviceInput.deviceInputWithDevice(
                 captureDevice,
                 error: error) as AVCaptureInput
