@@ -27,14 +27,18 @@ class GuideView: UIViewController {
             self.airViewController?.showAirViewFromViewController(self.navigationController, complete: nil)
             return
         }
-        func leftButtonTouch() {
-            self.airViewController?.showAirViewFromViewController(self.navigationController, complete: nil)
-        }
+//        func leftButtonTouch() {
+//            self.airViewController?.showAirViewFromViewController(self.navigationController, complete: nil)
+//        }
         ////////
-        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    func leftButtonTouch() {
+        self.airViewController?.showAirViewFromViewController(self.navigationController, complete: nil)
+    }
+    ////////
 }

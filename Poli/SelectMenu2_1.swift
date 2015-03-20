@@ -50,10 +50,11 @@ class SelectMenuController: UIViewController {
         var y:Int = 0;
         var w:Int = 240;
         var h:Int = 300;
-        let ButtonCute  = scrollImageButton("cute.jpeg",Fx: x, Fy: y, Fw: w,Fh: h,btnTitle: "cute",tag: 1)
-        let ButtonSexy = scrollImageButton("sexy.jpeg",Fx: w,Fy: y,Fw: w,Fh: h,btnTitle:"sexy",tag:2)
-        let ButtonLovely = scrollImageButton("lovely.jpeg",Fx: w*2,Fy: y,Fw: w,Fh: h,btnTitle:"lovely",tag:3)
-        let ButtonCool  = scrollImageButton("cool.jpeg",Fx: w*3,Fy: y,Fw: w,Fh: h,btnTitle:"cool",tag:4)
+        
+        let ButtonCute  = scrollImageButton("cute.jpeg",Fx: x, Fy: y, Fw: w,Fh: h,btnTitle: "cute",tag: 0)
+        let ButtonSexy = scrollImageButton("sexy.jpeg",Fx: w,Fy: y,Fw: w,Fh: h,btnTitle:"sexy",tag:1)
+        let ButtonLovely = scrollImageButton("lovely.jpeg",Fx: w*2,Fy: y,Fw: w,Fh: h,btnTitle:"lovely",tag:2)
+        let ButtonCool  = scrollImageButton("cool.jpeg",Fx: w*3,Fy: y,Fw: w,Fh: h,btnTitle:"cool",tag:3)
         
         let scrView = UIScrollView()
         scrView.frame = CGRectMake(65,192,240,400)
@@ -61,12 +62,13 @@ class SelectMenuController: UIViewController {
         //全体のサイズ
         scrView.contentSize = CGSizeMake(240*4, 300)
         
-        self.view.addSubview(scrView)
+        //self.view.addSubview(scrView)
         scrView.addSubview(ButtonCute)
         scrView.addSubview(ButtonSexy)
         scrView.addSubview(ButtonLovely)
         scrView.addSubview(ButtonCool)
 
+        self.view.addSubview(scrView)
         
         // １ページ単位でスクロールさせる
         scrView.pagingEnabled = true
@@ -86,9 +88,9 @@ class SelectMenuController: UIViewController {
     
     func scrollImageButton(NoI:String,Fx:Int,Fy:Int,Fw:Int,Fh:Int,btnTitle:String,tag:Int) -> UIButton{
         
-        //AppDelegateへの値渡し
+//        //AppDelegateへの値渡し
         var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        //AppDelegateのインスタンスを取得
+//        //AppDelegateのインスタンスを取得
         appDelegate.imageID = tag
         
         var btn:UIButton! = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
@@ -104,27 +106,22 @@ class SelectMenuController: UIViewController {
     func switchTag(sender:AnyObject){
         
         var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate //AppDelegateのインスタンスを取得
-        var imageID = appDelegate.imageID
+        //appDelegate.imageID
         
         println("HOGE")
         println("あ\(sender.tag)")
+        appDelegate.imageID = sender.tag
         //println("い\(imageID)")
         
         
         let Selpic: SelectPic = SelectPic()
-        let pushView: UINavigationController = UINavigationController(rootViewController: Selpic)
-        self.navigationController?.pushViewController(pushView, animated: true)
-        /*
-        //AppDelegateへの値渡し
-        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        //let pushView: UINavigationController = UINavigationController(rootViewController: Selpic)
+        self.navigationController?.pushViewController(Selpic, animated: true)
+        
         //AppDelegateのインスタンスを取得
-        appDelegate.imageID = tag
-        */
+        
         
     }
-    
-
-    
     
 }
 
