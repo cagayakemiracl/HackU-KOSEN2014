@@ -48,15 +48,10 @@ static cv::Mat con, tri;
     return self;
 }
 
-static cv::Mat im;
-
 - (UIImage *)Apply:(UIImage *)image {
-    auto th = std::thread([image]{
-        UIImageToMat(image, im, false);
-        FaceTracker::ApplyFaceRecognition(im, *model, con, tri);
-    });
-
-    th.join();
+    cv::Mat im;
+    UIImageToMat(image, im, false);
+    FaceTracker::ApplyFaceRecognition(im, *model, con, tri);
     
     return  MatToUIImage(im);
 }

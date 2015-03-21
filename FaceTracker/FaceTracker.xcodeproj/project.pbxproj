@@ -13,11 +13,11 @@
 		0165DEA61ABAB75500CED4C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0165DEA51ABAB75500CED4C5 /* Images.xcassets */; };
 		0165DEA91ABAB75500CED4C5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0165DEA71ABAB75500CED4C5 /* LaunchScreen.xib */; };
 		0165DEB51ABAB75500CED4C5 /* FaceTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0165DEB41ABAB75500CED4C5 /* FaceTrackerTests.swift */; };
+		016852A61ABDC97700F85874 /* ImageController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 016852A51ABDC97700F85874 /* ImageController.mm */; };
 		017E097D1ABABD55007D8645 /* face.con in Resources */ = {isa = PBXBuildFile; fileRef = 017E09791ABABD55007D8645 /* face.con */; };
 		017E097E1ABABD55007D8645 /* face.tracker in Resources */ = {isa = PBXBuildFile; fileRef = 017E097A1ABABD55007D8645 /* face.tracker */; };
 		017E097F1ABABD55007D8645 /* face.tri in Resources */ = {isa = PBXBuildFile; fileRef = 017E097B1ABABD55007D8645 /* face.tri */; };
 		017E09801ABABD55007D8645 /* face2.tracker in Resources */ = {isa = PBXBuildFile; fileRef = 017E097C1ABABD55007D8645 /* face2.tracker */; };
-		017E09AA1ABADB39007D8645 /* CameraUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E09A91ABADB39007D8645 /* CameraUtil.swift */; };
 		017E09C01ABAEE56007D8645 /* CLM.mm in Sources */ = {isa = PBXBuildFile; fileRef = 017E09B61ABAEE56007D8645 /* CLM.mm */; };
 		017E09C11ABAEE56007D8645 /* FaceTracker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 017E09B71ABAEE56007D8645 /* FaceTracker.mm */; };
 		017E09C21ABAEE56007D8645 /* FCheck.mm in Sources */ = {isa = PBXBuildFile; fileRef = 017E09B81ABAEE56007D8645 /* FCheck.mm */; };
@@ -52,6 +52,7 @@
 		0165DEAE1ABAB75500CED4C5 /* FaceTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0165DEB31ABAB75500CED4C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0165DEB41ABAB75500CED4C5 /* FaceTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTrackerTests.swift; sourceTree = "<group>"; };
+		016852A51ABDC97700F85874 /* ImageController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageController.mm; sourceTree = "<group>"; };
 		017E09791ABABD55007D8645 /* face.con */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = face.con; path = FaceTracker/model/face.con; sourceTree = SOURCE_ROOT; };
 		017E097A1ABABD55007D8645 /* face.tracker */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = face.tracker; path = FaceTracker/model/face.tracker; sourceTree = SOURCE_ROOT; };
 		017E097B1ABABD55007D8645 /* face.tri */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = face.tri; path = FaceTracker/model/face.tri; sourceTree = SOURCE_ROOT; };
@@ -65,7 +66,6 @@
 		017E098E1ABAD985007D8645 /* PAW.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = PAW.h; sourceTree = "<group>"; };
 		017E098F1ABAD985007D8645 /* PDM.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = PDM.h; sourceTree = "<group>"; };
 		017E09901ABAD985007D8645 /* Tracker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = Tracker.h; sourceTree = "<group>"; };
-		017E09A91ABADB39007D8645 /* CameraUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraUtil.swift; sourceTree = "<group>"; };
 		017E09B01ABAE43A007D8645 /* FaceTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FaceTracker-Bridging-Header.h"; sourceTree = "<group>"; };
 		017E09B61ABAEE56007D8645 /* CLM.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CLM.mm; sourceTree = "<group>"; };
 		017E09B71ABAEE56007D8645 /* FaceTracker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceTracker.mm; sourceTree = "<group>"; };
@@ -127,7 +127,6 @@
 				017E09B01ABAE43A007D8645 /* FaceTracker-Bridging-Header.h */,
 				017E09C91ABAF06C007D8645 /* recognition.mm */,
 				0165DE9E1ABAB75500CED4C5 /* AppDelegate.swift */,
-				017E09A91ABADB39007D8645 /* CameraUtil.swift */,
 				0165DEA01ABAB75500CED4C5 /* ViewController.swift */,
 				0165DEA51ABAB75500CED4C5 /* Images.xcassets */,
 				017E09861ABAD985007D8645 /* FaceTracker */,
@@ -136,6 +135,7 @@
 				017E09781ABABD55007D8645 /* model */,
 				017E09B21ABAEE56007D8645 /* src */,
 				0165DE9C1ABAB75500CED4C5 /* Supporting Files */,
+				016852A51ABDC97700F85874 /* ImageController.mm */,
 			);
 			path = FaceTracker;
 			sourceTree = "<group>";
@@ -374,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				017E09C71ABAEE56007D8645 /* PDM.mm in Sources */,
+				016852A61ABDC97700F85874 /* ImageController.mm in Sources */,
 				017E09C31ABAEE56007D8645 /* FDet.mm in Sources */,
 				0165DEA11ABAB75500CED4C5 /* ViewController.swift in Sources */,
 				017E09C61ABAEE56007D8645 /* PAW.mm in Sources */,
@@ -381,7 +382,6 @@
 				017E09C11ABAEE56007D8645 /* FaceTracker.mm in Sources */,
 				017E09C41ABAEE56007D8645 /* IO.mm in Sources */,
 				017E09C81ABAEE56007D8645 /* Tracker.mm in Sources */,
-				017E09AA1ABADB39007D8645 /* CameraUtil.swift in Sources */,
 				0165DE9F1ABAB75500CED4C5 /* AppDelegate.swift in Sources */,
 				017E09C21ABAEE56007D8645 /* FCheck.mm in Sources */,
 				017E09C51ABAEE56007D8645 /* Patch.mm in Sources */,

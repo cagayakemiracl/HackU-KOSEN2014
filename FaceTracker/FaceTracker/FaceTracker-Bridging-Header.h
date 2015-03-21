@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface Recognition: NSObject
 - (id)init;
 - (UIImage *)Apply:(UIImage *)image;
+@end
+
+@interface ImageController: NSObject
+- (UIImage *)createImageFromBuffer:(CMSampleBufferRef) sbrBuffer;
 @end

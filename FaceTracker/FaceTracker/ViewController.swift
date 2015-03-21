@@ -19,9 +19,11 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     var myOutput : AVCaptureVideoDataOutput!
     var recognition = Recognition()
     var layer = CALayer();
+    var imcImageController: ImageController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        imcImageController = ImageController()
         // Do any additional setup after loading the view, typically from a nib.
         if initCamera() {
             layer.frame = self.view.bounds
@@ -114,22 +116,12 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!)
     {
         // UIImageへ変換して表示させる
-        var image = CameraUtil.imageFromSampleBuffer(sampleBuffer)
-
-        /*
-        var pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
-        // ピクセルバッファをベースにCoreImageのCIImageオブジェクトを作成
-        var ciimage = CIImage(CVPixelBuffer: pixelBuffer)
-        // CIImageからUIImageを作成
-        var image = UIImage(CIImage: ciimage)
-        */
-        
-        var tempimage = recognition.Apply(image)
+        var image = imcImageController.createImageFromBuffer(sampleBuffer)
+        image = recognition.Apply(image)
 
         dispatch_async(dispatch_get_main_queue(), {
-            self.layer.contents = tempimage.CGImage
+            self.layer.contents = image.CGImage
         })
     }
-
 }
 
