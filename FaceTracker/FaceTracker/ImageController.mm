@@ -45,7 +45,7 @@
         //CGColorSpaceRelease(colorSpace);
     CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
 
-    UIImage *image = [UIImage imageWithCGImage:cgImage scale:1.0 orientation:UIImageOrientationRight];
+    UIImage *image = [UIImage imageWithCGImage:cgImage];
 
     CGImageRelease(cgImage);
 

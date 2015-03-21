@@ -125,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				017E09B01ABAE43A007D8645 /* FaceTracker-Bridging-Header.h */,
+				016852A51ABDC97700F85874 /* ImageController.mm */,
 				017E09C91ABAF06C007D8645 /* recognition.mm */,
 				0165DE9E1ABAB75500CED4C5 /* AppDelegate.swift */,
 				0165DEA01ABAB75500CED4C5 /* ViewController.swift */,
@@ -135,7 +136,6 @@
 				017E09781ABABD55007D8645 /* model */,
 				017E09B21ABAEE56007D8645 /* src */,
 				0165DE9C1ABAB75500CED4C5 /* Supporting Files */,
-				016852A51ABDC97700F85874 /* ImageController.mm */,
 			);
 			path = FaceTracker;
 			sourceTree = "<group>";
