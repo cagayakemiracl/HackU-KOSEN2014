@@ -8,6 +8,7 @@
 
 import AVFoundation
 import UIKit
+import QuartzCore
 
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     // セッション
@@ -16,16 +17,15 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     var myDevice : AVCaptureDevice!
     // 出力先
     var myOutput : AVCaptureVideoDataOutput!
-    var layer = UIImageView()
-    var recognition = Recognition();
+    var recognition = Recognition()
+    var layer = CALayer();
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.layer.frame = self.view.bounds
-        self.view.addSubview(self.layer)
-
         if initCamera() {
+            layer.frame = self.view.bounds
+            self.view.layer.addSublayer(layer)
             mySession.startRunning()
         }
     }
@@ -79,7 +79,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             }
         }
 
-        myOutput.setSampleBufferDelegate(self, queue: dispatch_get_main_queue())
+        var queue = dispatch_queue_create("VideoQueue", DISPATCH_QUEUE_SERIAL);
+        myOutput.setSampleBufferDelegate(self, queue: queue)
 
         // 遅れてきたフレームは無視する
         myOutput.alwaysDiscardsLateVideoFrames = true
@@ -114,7 +115,21 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     {
         // UIImageへ変換して表示させる
         var image = CameraUtil.imageFromSampleBuffer(sampleBuffer)
-        self.layer.image = recognition.Apply(image)
+
+        /*
+        var pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
+        // ピクセルバッファをベースにCoreImageのCIImageオブジェクトを作成
+        var ciimage = CIImage(CVPixelBuffer: pixelBuffer)
+        // CIImageからUIImageを作成
+        var image = UIImage(CIImage: ciimage)
+        */
+        
+        var tempimage = recognition.Apply(image)
+
+        dispatch_async(dispatch_get_main_queue(), {
+            self.layer.contents = tempimage.CGImage
+        })
     }
+
 }
 

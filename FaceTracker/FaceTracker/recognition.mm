@@ -12,34 +12,12 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/highgui/ios.h>
 #include <iostream>
+#include <future>
 
 using namespace FACETRACKER;
 
-static Tracker model;
+static Tracker *model;
 static cv::Mat con, tri;
-
-static cv::Mat UIImageToMat(UIImage *image) {
-        // UIImage -> cv::Mat変換
-    CGColorSpaceRef colorSpace = CGImageGetColorSpace(image.CGImage);
-    CGFloat cols = image.size.width;
-    CGFloat rows = image.size.height;
-
-    cv::Mat mat(rows, cols, CV_8UC4);
-
-    CGContextRef contextRef = CGBitmapContextCreate(mat.data,
-                                                    cols,
-                                                    rows,
-                                                    8,
-                                                    mat.step[0],
-                                                    colorSpace,
-                                                    kCGImageAlphaNoneSkipLast |
-                                                    kCGBitmapByteOrderDefault);
-
-    CGContextDrawImage(contextRef, CGRectMake(0, 0, cols, rows), image.CGImage);
-    CGContextRelease(contextRef);
-
-    return mat;
-}
 
 @implementation Recognition: NSObject
 
@@ -63,17 +41,23 @@ static cv::Mat UIImageToMat(UIImage *image) {
     auto conFile = [conPath cStringUsingEncoding:[NSString defaultCStringEncoding]];
     auto triFile = [triPath cStringUsingEncoding:[NSString defaultCStringEncoding]];
 
-    Tracker model(ftFile);
+    model = new Tracker(ftFile);
     con = IO::LoadCon(conFile);
     tri = IO::LoadTri(triFile);
 
     return self;
 }
 
-- (UIImage *)Apply:(UIImage *)image {
-    auto im = UIImageToMat(image);
-    FaceTracker::ApplyFaceRecognition(im, model, con, tri);
+static cv::Mat im;
 
+- (UIImage *)Apply:(UIImage *)image {
+    auto th = std::thread([image]{
+        UIImageToMat(image, im, false);
+        FaceTracker::ApplyFaceRecognition(im, *model, con, tri);
+    });
+
+    th.join();
+    
     return  MatToUIImage(im);
 }
 
