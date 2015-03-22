@@ -8,12 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		01D033971A9CC1EA00325163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D033961A9CC1EA00325163 /* AppDelegate.swift */; };
-		01D033991A9CC1EA00325163 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D033981A9CC1EA00325163 /* ViewController.swift */; };
+		01D033991A9CC1EA00325163 /* ViewController2-1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D033981A9CC1EA00325163 /* ViewController2-1.swift */; };
 		01D0339C1A9CC1EA00325163 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D0339A1A9CC1EA00325163 /* Main.storyboard */; };
 		01D0339E1A9CC1EA00325163 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D0339D1A9CC1EA00325163 /* Images.xcassets */; };
 		01D033A11A9CC1EA00325163 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D0339F1A9CC1EA00325163 /* LaunchScreen.xib */; };
 		01D033AD1A9CC1EA00325163 /* PoliTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D033AC1A9CC1EA00325163 /* PoliTests.swift */; };
-		41BB1CF61AACA08D00872DFE /* ロゴたいぷゴシックCondense.otf in Resources */ = {isa = PBXBuildFile; fileRef = 41E9771D1AAC9F6300364765 /* ロゴたいぷゴシックCondense.otf */; };
+		377B25D61AA9DEA300C5E066 /* AirbnbHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 377B25CB1AA9DEA300C5E066 /* AirbnbHelper.m */; };
+		377B25D71AA9DEA300C5E066 /* AirbnbSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B25CC1AA9DEA300C5E066 /* AirbnbSessionView.swift */; };
+		377B25D81AA9DEA300C5E066 /* AirbnbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B25CD1AA9DEA300C5E066 /* AirbnbViewController.swift */; };
+		379C647D1AB5D2F80035B4DB /* sexy.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 379C647C1AB5D2F80035B4DB /* sexy.jpeg */; };
+		379C64811AB5D3CB0035B4DB /* cool.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 379C647E1AB5D3CB0035B4DB /* cool.jpeg */; };
+		379C64821AB5D3CB0035B4DB /* cute.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 379C647F1AB5D3CB0035B4DB /* cute.jpeg */; };
+		379C64831AB5D3CB0035B4DB /* lovely.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 379C64801AB5D3CB0035B4DB /* lovely.jpeg */; };
+		37A691091AB3121C0084A9A0 /* nextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A691081AB3121C0084A9A0 /* nextView.swift */; };
+		37A976EF1AB3EB3400B32310 /* SelectMenu2_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A976EE1AB3EB3400B32310 /* SelectMenu2_1.swift */; };
+		37A976F31AB3EB8300B32310 /* SelectPic2_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A976F21AB3EB8300B32310 /* SelectPic2_2.swift */; };
+		37A976F51AB3EBAE00B32310 /* DrawerMenu2_1_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A976F41AB3EBAE00B32310 /* DrawerMenu2_1_1.swift */; };
+		37A976F71AB3EBDC00B32310 /* ProgressProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A976F61AB3EBDC00B32310 /* ProgressProgram.swift */; };
+		37A976FB1AB4095600B32310 /* Guide2_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A976FA1AB4095600B32310 /* Guide2_3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,14 +42,28 @@
 		01D033911A9CC1EA00325163 /* Poli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01D033951A9CC1EA00325163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01D033961A9CC1EA00325163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01D033981A9CC1EA00325163 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		01D033981A9CC1EA00325163 /* ViewController2-1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController2-1.swift"; sourceTree = "<group>"; };
 		01D0339B1A9CC1EA00325163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01D0339D1A9CC1EA00325163 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		01D033A01A9CC1EA00325163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		01D033A61A9CC1EA00325163 /* PoliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoliTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01D033AB1A9CC1EA00325163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01D033AC1A9CC1EA00325163 /* PoliTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliTests.swift; sourceTree = "<group>"; };
-		41E9771D1AAC9F6300364765 /* ロゴたいぷゴシックCondense.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ロゴたいぷゴシックCondense.otf"; path = "../../../../Desktop/ロゴたいぷゴシックCondense.otf"; sourceTree = "<group>"; };
+		377B25CA1AA9DEA300C5E066 /* AirbnbHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirbnbHelper.h; sourceTree = "<group>"; };
+		377B25CB1AA9DEA300C5E066 /* AirbnbHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirbnbHelper.m; sourceTree = "<group>"; };
+		377B25CC1AA9DEA300C5E066 /* AirbnbSessionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirbnbSessionView.swift; sourceTree = "<group>"; };
+		377B25CD1AA9DEA300C5E066 /* AirbnbViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirbnbViewController.swift; sourceTree = "<group>"; };
+		377B25DF1AA9DF1400C5E066 /* Poli-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poli-Bridging-Header.h"; sourceTree = "<group>"; };
+		379C647C1AB5D2F80035B4DB /* sexy.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sexy.jpeg; path = ../sexy.jpeg; sourceTree = "<group>"; };
+		379C647E1AB5D3CB0035B4DB /* cool.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cool.jpeg; path = ../cool.jpeg; sourceTree = "<group>"; };
+		379C647F1AB5D3CB0035B4DB /* cute.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cute.jpeg; path = ../cute.jpeg; sourceTree = "<group>"; };
+		379C64801AB5D3CB0035B4DB /* lovely.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lovely.jpeg; path = ../lovely.jpeg; sourceTree = "<group>"; };
+		37A691081AB3121C0084A9A0 /* nextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nextView.swift; sourceTree = "<group>"; };
+		37A976EE1AB3EB3400B32310 /* SelectMenu2_1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectMenu2_1.swift; path = ../SelectMenu2_1.swift; sourceTree = "<group>"; };
+		37A976F21AB3EB8300B32310 /* SelectPic2_2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectPic2_2.swift; path = ../SelectPic2_2.swift; sourceTree = "<group>"; };
+		37A976F41AB3EBAE00B32310 /* DrawerMenu2_1_1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrawerMenu2_1_1.swift; path = ../DrawerMenu2_1_1.swift; sourceTree = "<group>"; };
+		37A976F61AB3EBDC00B32310 /* ProgressProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressProgram.swift; sourceTree = "<group>"; };
+		37A976FA1AB4095600B32310 /* Guide2_3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Guide2_3.swift; path = ../Guide2_3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +87,7 @@
 		01D033881A9CC1EA00325163 = {
 			isa = PBXGroup;
 			children = (
+				37A976F61AB3EBDC00B32310 /* ProgressProgram.swift */,
 				01D033931A9CC1EA00325163 /* Poli */,
 				01D033A91A9CC1EA00325163 /* PoliTests */,
 				01D033921A9CC1EA00325163 /* Products */,
@@ -79,13 +106,23 @@
 		01D033931A9CC1EA00325163 /* Poli */ = {
 			isa = PBXGroup;
 			children = (
-				41E9771D1AAC9F6300364765 /* ロゴたいぷゴシックCondense.otf */,
+				377B25C81AA9DEA300C5E066 /* AirbnbViewController */,
+				379C647C1AB5D2F80035B4DB /* sexy.jpeg */,
+				379C647E1AB5D3CB0035B4DB /* cool.jpeg */,
+				379C647F1AB5D3CB0035B4DB /* cute.jpeg */,
+				379C64801AB5D3CB0035B4DB /* lovely.jpeg */,
 				01D033961A9CC1EA00325163 /* AppDelegate.swift */,
-				01D033981A9CC1EA00325163 /* ViewController.swift */,
+				01D033981A9CC1EA00325163 /* ViewController2-1.swift */,
+				37A691081AB3121C0084A9A0 /* nextView.swift */,
+				37A976EE1AB3EB3400B32310 /* SelectMenu2_1.swift */,
+				37A976F41AB3EBAE00B32310 /* DrawerMenu2_1_1.swift */,
+				37A976F21AB3EB8300B32310 /* SelectPic2_2.swift */,
+				37A976FA1AB4095600B32310 /* Guide2_3.swift */,
 				01D0339A1A9CC1EA00325163 /* Main.storyboard */,
 				01D0339D1A9CC1EA00325163 /* Images.xcassets */,
 				01D0339F1A9CC1EA00325163 /* LaunchScreen.xib */,
 				01D033941A9CC1EA00325163 /* Supporting Files */,
+				377B25DF1AA9DF1400C5E066 /* Poli-Bridging-Header.h */,
 			);
 			path = Poli;
 			sourceTree = "<group>";
@@ -113,6 +150,26 @@
 				01D033AB1A9CC1EA00325163 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		377B25C81AA9DEA300C5E066 /* AirbnbViewController */ = {
+			isa = PBXGroup;
+			children = (
+				377B25C91AA9DEA300C5E066 /* AirbnbHelper */,
+				377B25CC1AA9DEA300C5E066 /* AirbnbSessionView.swift */,
+				377B25CD1AA9DEA300C5E066 /* AirbnbViewController.swift */,
+			);
+			name = AirbnbViewController;
+			path = AirbnbViewController/AirbnbViewController;
+			sourceTree = "<group>";
+		};
+		377B25C91AA9DEA300C5E066 /* AirbnbHelper */ = {
+			isa = PBXGroup;
+			children = (
+				377B25CA1AA9DEA300C5E066 /* AirbnbHelper.h */,
+				377B25CB1AA9DEA300C5E066 /* AirbnbHelper.m */,
+			);
+			path = AirbnbHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +217,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = "中原啓雅";
+				ORGANIZATIONNAME = "西村 礼恩";
 				TargetAttributes = {
 					01D033901A9CC1EA00325163 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -195,10 +252,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41BB1CF61AACA08D00872DFE /* ロゴたいぷゴシックCondense.otf in Resources */,
+				379C64821AB5D3CB0035B4DB /* cute.jpeg in Resources */,
 				01D0339C1A9CC1EA00325163 /* Main.storyboard in Resources */,
+				379C64831AB5D3CB0035B4DB /* lovely.jpeg in Resources */,
 				01D033A11A9CC1EA00325163 /* LaunchScreen.xib in Resources */,
 				01D0339E1A9CC1EA00325163 /* Images.xcassets in Resources */,
+				379C647D1AB5D2F80035B4DB /* sexy.jpeg in Resources */,
+				379C64811AB5D3CB0035B4DB /* cool.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,8 +276,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01D033991A9CC1EA00325163 /* ViewController.swift in Sources */,
+				37A976EF1AB3EB3400B32310 /* SelectMenu2_1.swift in Sources */,
+				37A976F51AB3EBAE00B32310 /* DrawerMenu2_1_1.swift in Sources */,
+				377B25D81AA9DEA300C5E066 /* AirbnbViewController.swift in Sources */,
+				37A976FB1AB4095600B32310 /* Guide2_3.swift in Sources */,
+				37A691091AB3121C0084A9A0 /* nextView.swift in Sources */,
+				01D033991A9CC1EA00325163 /* ViewController2-1.swift in Sources */,
+				377B25D71AA9DEA300C5E066 /* AirbnbSessionView.swift in Sources */,
 				01D033971A9CC1EA00325163 /* AppDelegate.swift in Sources */,
+				37A976F71AB3EBDC00B32310 /* ProgressProgram.swift in Sources */,
+				377B25D61AA9DEA300C5E066 /* AirbnbHelper.m in Sources */,
+				37A976F31AB3EB8300B32310 /* SelectPic2_2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,10 +409,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Poli/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Poli/Poli-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -351,10 +420,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Poli/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Poli/Poli-Bridging-Header.h";
 			};
 			name = Release;
 		};
