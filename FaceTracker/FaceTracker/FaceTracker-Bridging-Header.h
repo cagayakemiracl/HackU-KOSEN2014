@@ -13,6 +13,8 @@
 @interface Recognition: NSObject
 - (id)init;
 - (UIImage *)Apply:(UIImage *)image;
+- (void)FrameReset;
+- (NSArray *)GetPoints;
 @end
 
 @interface ImageController: NSObject

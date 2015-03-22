@@ -24,15 +24,6 @@ static cv::Mat con, tri;
 - (id)init {
     self = [super init];
 
-    NSError *error;
-    NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
-    NSArray *directory = [[NSFileManager defaultManager]
-                          contentsOfDirectoryAtPath:resourcePath error:&error];
-    for (NSString *str in directory)
-    {
-        NSLog(@"FileName:%@",str);
-    }
-
     auto ftPath  = [[NSBundle mainBundle] pathForResource:@"face2" ofType:@"tracker"];
     auto conPath = [[NSBundle mainBundle] pathForResource:@"face" ofType:@"con"];
     auto triPath = [[NSBundle mainBundle] pathForResource:@"face" ofType:@"tri"];
@@ -56,5 +47,20 @@ static cv::Mat con, tri;
     return  MatToUIImage(im);
 }
 
-@end
+- (void)FrameReset {
+    model->FrameReset();
+}
 
+- (NSArray *)GetPoints {
+    auto points = [NSMutableArray array];
+    auto n = model->_shape.rows / 2;
+    for (auto i = 0; i < n; ++i) {
+        auto point = CGPointMake(model->_shape.at<double>(i, 0),
+                                 model->_shape.at<double>(i + n, 0));
+        [points addObject: [NSValue valueWithCGPoint:point]];
+    }
+
+    return [points copy];
+}
+
+@end

@@ -11,6 +11,9 @@ import UIKit
 import QuartzCore
 
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+    @IBOutlet weak var resetBtn: UIButton!
+    @IBOutlet weak var mainView: UIView!
+    
     // セッション
     var mySession : AVCaptureSession!
     // カメラデバイス
@@ -26,8 +29,9 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         imcImageController = ImageController()
         // Do any additional setup after loading the view, typically from a nib.
         if initCamera() {
-            layer.frame = self.view.bounds
-            self.view.layer.addSublayer(layer)
+            layer.frame = self.mainView.bounds
+            layer.position = self.mainView.center
+            self.mainView.layer.addSublayer(layer)
             mySession.startRunning()
         }
     }
@@ -122,6 +126,10 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         dispatch_async(dispatch_get_main_queue(), {
             self.layer.contents = image.CGImage
         })
+    }
+
+    @IBAction func onClick(sender: UIButton) {
+        self.recognition.FrameReset()
     }
 }
 

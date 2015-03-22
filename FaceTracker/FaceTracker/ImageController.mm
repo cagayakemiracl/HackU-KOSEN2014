@@ -42,7 +42,7 @@
     CGImageRef cgImage = CGBitmapContextCreateImage(newContext);
 
     CGContextRelease(newContext);
-        //CGColorSpaceRelease(colorSpace);
+        //CGColorSpaceRelease(self.CGColorSpace);
     CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
 
     UIImage *image = [UIImage imageWithCGImage:cgImage];
