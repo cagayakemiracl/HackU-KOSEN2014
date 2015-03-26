@@ -53,7 +53,7 @@ static cv::Scalar color;
         auto drawX = [[pointAt objectAtIndex:0] doubleValue] + drawPointInFace.x_move_;
         auto drawY = [[pointAt objectAtIndex:1] doubleValue] + drawPointInFace.y_move_;
         auto drawPoint = cv::Point(drawX, drawY);
-        cv::circle(im, drawPoint, 3, color);
+        cv::circle(im, drawPoint, 10, color);
     }
     
     return  MatToUIImage(im);
