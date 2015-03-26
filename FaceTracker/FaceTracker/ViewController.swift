@@ -225,13 +225,13 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
 
     @IBAction func onClickNextBtn(sender: UIButton) {
-        if self.processIndex == 0 { return }
+        if self.processIndex == processString.count - 1 { return }
         self.processIndex += 1
         changeProcessLabel()
     }
 
     @IBAction func onClickBackBtn(sender: UIButton) {
-        if self.processIndex == processString.count { return }
+        if self.processIndex == 0 { return }
         self.processIndex -= 1
         changeProcessLabel()
     }
