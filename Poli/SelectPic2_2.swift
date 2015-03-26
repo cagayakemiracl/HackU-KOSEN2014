@@ -48,7 +48,7 @@ class SelectPic: UIViewController {
         label.adjustsFontSizeToFitWidth = true
         label.textAlignment = NSTextAlignment.Center
         label.textColor = UIColor.blackColor()
-        label.text = ScrollViews[imageID]
+        label.text = ScrollViews[imageID!]
         label.font = UIFont.boldSystemFontOfSize(66)
         view.addSubview(label)
         
