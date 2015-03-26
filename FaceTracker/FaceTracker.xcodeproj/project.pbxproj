@@ -28,6 +28,7 @@
 		017E09C71ABAEE56007D8645 /* PDM.mm in Sources */ = {isa = PBXBuildFile; fileRef = 017E09BD1ABAEE56007D8645 /* PDM.mm */; };
 		017E09C81ABAEE56007D8645 /* Tracker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 017E09BE1ABAEE56007D8645 /* Tracker.mm */; };
 		017E09CA1ABAF06C007D8645 /* recognition.mm in Sources */ = {isa = PBXBuildFile; fileRef = 017E09C91ABAF06C007D8645 /* recognition.mm */; };
+		01C41E6A1AC3E7BC004F39DE /* DrawPointInFace.mm in Sources */ = {isa = PBXBuildFile; fileRef = 01C41E691AC3E7BC004F39DE /* DrawPointInFace.mm */; };
 		B36B6367AE30904187C1B0C0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA27644FB424AB05D4C7FAF7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		017E09BD1ABAEE56007D8645 /* PDM.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PDM.mm; sourceTree = "<group>"; };
 		017E09BE1ABAEE56007D8645 /* Tracker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Tracker.mm; sourceTree = "<group>"; };
 		017E09C91ABAF06C007D8645 /* recognition.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = recognition.mm; sourceTree = "<group>"; };
+		01C41E691AC3E7BC004F39DE /* DrawPointInFace.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DrawPointInFace.mm; sourceTree = "<group>"; };
 		AA27644FB424AB05D4C7FAF7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D525749F1D15C36CC366E69A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E9435EEB5304955E80590E53 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				017E09B01ABAE43A007D8645 /* FaceTracker-Bridging-Header.h */,
+				01C41E691AC3E7BC004F39DE /* DrawPointInFace.mm */,
 				016852A51ABDC97700F85874 /* ImageController.mm */,
 				017E09C91ABAF06C007D8645 /* recognition.mm */,
 				0165DE9E1ABAB75500CED4C5 /* AppDelegate.swift */,
@@ -379,6 +382,7 @@
 				0165DEA11ABAB75500CED4C5 /* ViewController.swift in Sources */,
 				017E09C61ABAEE56007D8645 /* PAW.mm in Sources */,
 				017E09CA1ABAF06C007D8645 /* recognition.mm in Sources */,
+				01C41E6A1AC3E7BC004F39DE /* DrawPointInFace.mm in Sources */,
 				017E09C11ABAEE56007D8645 /* FaceTracker.mm in Sources */,
 				017E09C41ABAEE56007D8645 /* IO.mm in Sources */,
 				017E09C81ABAEE56007D8645 /* Tracker.mm in Sources */,

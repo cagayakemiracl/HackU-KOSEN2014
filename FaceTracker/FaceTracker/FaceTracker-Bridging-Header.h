@@ -10,11 +10,20 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
+@interface DrawPointInFace: NSObject
+- (id)init:(int)sharp_at x:(double)x_move y:(double)y_move;
+@property (nonatomic)int sharp_at_;
+@property (nonatomic)double x_move_;
+@property (nonatomic)double y_move_;
+@end
+
 @interface Recognition: NSObject
 - (id)init;
-- (UIImage *)Apply:(UIImage *)image;
+- (UIImage *)Apply:(UIImage *)image drawPoints:(NSArray *)array;
 - (void)FrameReset;
 - (NSArray *)GetPoints;
+- (void)PrintPoints;
+- (NSArray *)GetPointAt:(int)sharp_at;
 @end
 
 @interface ImageController: NSObject

@@ -18,6 +18,7 @@ using namespace FACETRACKER;
 
 static Tracker *model;
 static cv::Mat con, tri;
+static cv::Scalar color;
 
 @implementation Recognition: NSObject
 
@@ -35,14 +36,25 @@ static cv::Mat con, tri;
     model = new Tracker(ftFile);
     con = IO::LoadCon(conFile);
     tri = IO::LoadTri(triFile);
+    color = CV_RGB(255, 0, 0);
 
     return self;
 }
 
-- (UIImage *)Apply:(UIImage *)image {
+- (UIImage *)Apply:(UIImage *)image drawPoints:(NSArray *)array{
     cv::Mat im;
     UIImageToMat(image, im, false);
     FaceTracker::ApplyFaceRecognition(im, *model, con, tri);
+    if (!array) return MatToUIImage(im);
+
+    for (auto i = 0; i < array.count; ++i) {
+        DrawPointInFace *drawPointInFace = [array objectAtIndex:i];
+        auto pointAt = [self GetPointAt:drawPointInFace.sharp_at_];
+        auto drawX = [[pointAt objectAtIndex:0] doubleValue] + drawPointInFace.x_move_;
+        auto drawY = [[pointAt objectAtIndex:1] doubleValue] + drawPointInFace.y_move_;
+        auto drawPoint = cv::Point(drawX, drawY);
+        cv::circle(im, drawPoint, 3, color);
+    }
     
     return  MatToUIImage(im);
 }
@@ -55,12 +67,26 @@ static cv::Mat con, tri;
     auto points = [NSMutableArray array];
     auto n = model->_shape.rows / 2;
     for (auto i = 0; i < n; ++i) {
-        auto point = CGPointMake(model->_shape.at<double>(i, 0),
-                                 model->_shape.at<double>(i + n, 0));
-        [points addObject: [NSValue valueWithCGPoint:point]];
+        [points addObject: [NSNumber numberWithDouble:model->_shape.at<double>(i, 0)]];
+        [points addObject: [NSNumber numberWithDouble:model->_shape.at<double>(i + n, 0)]];
     }
 
     return [points copy];
 }
 
+- (void)PrintPoints {
+    auto points = [self GetPoints];
+    for (auto i = 0; i < points.count; ++i) {
+        NSLog(@"%@", [points objectAtIndex:i]);
+    }
+}
+
+- (NSArray *)GetPointAt:(int)sharp_at {
+    auto pointAt = [NSMutableArray array];
+    auto n = model->_shape.rows / 2;
+    [pointAt addObject: [NSNumber numberWithDouble:model->_shape.at<double>(sharp_at, 0)]];
+    [pointAt addObject: [NSNumber numberWithDouble:model->_shape.at<double>(sharp_at + n, 0)]];
+
+    return [pointAt copy];
+}
 @end

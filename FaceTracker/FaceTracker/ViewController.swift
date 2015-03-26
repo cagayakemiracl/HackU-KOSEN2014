@@ -7,13 +7,15 @@
 //
 
 import AVFoundation
+import Foundation
 import UIKit
 import QuartzCore
 
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
-    @IBOutlet weak var resetBtn: UIButton!
-    @IBOutlet weak var mainView: UIView!
-    
+    @IBOutlet weak var backBtn: UIButton!
+    @IBOutlet weak var rstBtn: UIButton!
+    @IBOutlet weak var nextBtn: UIButton!
+    @IBOutlet weak var processLabel: UILabel!
     // セッション
     var mySession : AVCaptureSession!
     // カメラデバイス
@@ -21,7 +23,6 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     // 出力先
     var myOutput : AVCaptureVideoDataOutput!
     var recognition = Recognition()
-    var layer = CALayer();
     var imcImageController: ImageController!
 
     override func viewDidLoad() {
@@ -29,9 +30,6 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         imcImageController = ImageController()
         // Do any additional setup after loading the view, typically from a nib.
         if initCamera() {
-            layer.frame = self.mainView.bounds
-            layer.position = self.mainView.center
-            self.mainView.layer.addSublayer(layer)
             mySession.startRunning()
         }
     }
@@ -121,15 +119,25 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     {
         // UIImageへ変換して表示させる
         var image = imcImageController.createImageFromBuffer(sampleBuffer)
-        image = recognition.Apply(image)
+        var point1 = DrawPointInFace(0, x: 30.0, y: 0.0)
+        var point2 = DrawPointInFace(1, x: 30.0, y: 0.0)
+        var array = NSArray(array: [point1, point2])
+        image = recognition.Apply(image, drawPoints: array)
 
         dispatch_async(dispatch_get_main_queue(), {
-            self.layer.contents = image.CGImage
+            self.view.layer.contents = image.CGImage
         })
     }
 
     @IBAction func onClick(sender: UIButton) {
         self.recognition.FrameReset()
     }
-}
 
+    @IBAction func onClickNextBtn(sender: UIButton) {
+        //self.recognition.PrintPoints()
+        var points = recognition.GetPoints() as [AnyObject] as [NSNumber]
+        for point in points {
+            NSLog("%@", point)
+        }
+    }
+}
