@@ -69,11 +69,11 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         array = NSArray(array: [])
         self.pointArray.append(array)
 
-        p1 = DrawPointInFace(21, x: 10, y: -20)
-        p2 = DrawPointInFace(2, x: 20, y: 0)
+        p1 = DrawPointInFace(21, x: 35, y: -30)
+        p2 = DrawPointInFace(2, x: 30, y: 0)
         p3 = DrawPointInFace(29, x: 0, y: 0)
-        p4 = DrawPointInFace(14, x: -20, y: 0)
-        p5 = DrawPointInFace(8, x: 0, y: -10)
+        p4 = DrawPointInFace(14, x: -30, y: 0)
+        p5 = DrawPointInFace(8, x: 0, y: -30)
         array = NSArray(array: [p1, p2, p3, p4, p5])
         self.pointArray.append(array)
 
@@ -85,8 +85,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         array = NSArray(array: [p1, p2])
         self.pointArray.append(array)
 
-        p1 = DrawPointInFace(37, x: 0, y: 0)
-        p2 = DrawPointInFace(43, x: 0, y: 0)
+        p1 = DrawPointInFace(37, x: 10, y: -5)
+        p2 = DrawPointInFace(43, x: 10, y: -5)
         array = NSArray(array: [p1, p2])
         self.pointArray.append(array)
 
@@ -95,7 +95,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         array = NSArray(array: [p1, p2])
         self.pointArray.append(array)
 
-        p1 = DrawPointInFace(36, x: -10, y: -10)
+        p1 = DrawPointInFace(36, x: -20, y: -20)
         array = NSArray(array: [p1])
         self.pointArray.append(array)
 
@@ -103,24 +103,23 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         array = NSArray(array: [p1])
         self.pointArray.append(array)
 
-        p1 = DrawPointInFace(41, x: 10, y: 5)
+        p1 = DrawPointInFace(41, x: 20, y: 15)
         array = NSArray(array: [p1])
         self.pointArray.append(array)
 
-        p1 = DrawPointInFace(47, x: 5, y: 5)
+        p1 = DrawPointInFace(47, x: 15, y: 15)
         array = NSArray(array: [p1])
         self.pointArray.append(array)
 
         array = NSArray(array: [])
         self.pointArray.append(array)
 
-        p1 = DrawPointInFace(37, x: 0, y: -5)
+        p1 = DrawPointInFace(37, x: 0, y: -15)
         array = NSArray(array: [])
         self.pointArray.append(array)
 
         array = NSArray(array: [])
         self.pointArray.append(array)
-
     }
 
     // カメラの準備処理
