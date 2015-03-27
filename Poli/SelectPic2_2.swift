@@ -31,7 +31,7 @@ class SelectPic: UIViewController {
     var h:Int = 377;
     
     var imageView: UIImageView!
-    var scrollView: UIScrollView!
+    var scrollView: UIScrollView! = UIScrollView()
     
     var label: UILabel!
     
@@ -48,11 +48,11 @@ class SelectPic: UIViewController {
         label.adjustsFontSizeToFitWidth = true
         label.textAlignment = NSTextAlignment.Center
         label.textColor = UIColor.blackColor()
-        label.text = ScrollViews[imageID!]
+        label.text = ScrollViews[imageID]
         label.font = UIFont.boldSystemFontOfSize(66)
         view.addSubview(label)
         
-       // scrollView.frame = CGRect(x: x,y: y,width: w,height: h)
+        scrollView.frame = CGRect(x: x,y: y,width: w,height: h)
         
 
     }

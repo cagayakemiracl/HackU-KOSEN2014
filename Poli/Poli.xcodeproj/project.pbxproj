@@ -13,6 +13,11 @@
 		01D0339E1A9CC1EA00325163 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D0339D1A9CC1EA00325163 /* Images.xcassets */; };
 		01D033A11A9CC1EA00325163 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D0339F1A9CC1EA00325163 /* LaunchScreen.xib */; };
 		01D033AD1A9CC1EA00325163 /* PoliTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D033AC1A9CC1EA00325163 /* PoliTests.swift */; };
+		372210281AC4FE9D00B52F95 /* Finishi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372210271AC4FE9D00B52F95 /* Finishi.swift */; };
+		3722102B1AC4FECC00B52F95 /* finish.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 372210291AC4FECC00B52F95 /* finish.jpeg */; };
+		3722102C1AC4FECC00B52F95 /* twitter_button.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3722102A1AC4FECC00B52F95 /* twitter_button.jpeg */; };
+		3722102E1AC501EF00B52F95 /* facebook_button.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3722102D1AC501EF00B52F95 /* facebook_button.jpg */; };
+		372210321AC50F8F00B52F95 /* mail_button.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 372210311AC50F8F00B52F95 /* mail_button.jpeg */; };
 		377B25D61AA9DEA300C5E066 /* AirbnbHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 377B25CB1AA9DEA300C5E066 /* AirbnbHelper.m */; };
 		377B25D71AA9DEA300C5E066 /* AirbnbSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B25CC1AA9DEA300C5E066 /* AirbnbSessionView.swift */; };
 		377B25D81AA9DEA300C5E066 /* AirbnbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B25CD1AA9DEA300C5E066 /* AirbnbViewController.swift */; };
@@ -49,6 +54,11 @@
 		01D033A61A9CC1EA00325163 /* PoliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoliTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01D033AB1A9CC1EA00325163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01D033AC1A9CC1EA00325163 /* PoliTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliTests.swift; sourceTree = "<group>"; };
+		372210271AC4FE9D00B52F95 /* Finishi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Finishi.swift; path = ../Finishi.swift; sourceTree = "<group>"; };
+		372210291AC4FECC00B52F95 /* finish.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = finish.jpeg; path = ../finish.jpeg; sourceTree = "<group>"; };
+		3722102A1AC4FECC00B52F95 /* twitter_button.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = twitter_button.jpeg; path = ../twitter_button.jpeg; sourceTree = "<group>"; };
+		3722102D1AC501EF00B52F95 /* facebook_button.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = facebook_button.jpg; sourceTree = "<group>"; };
+		372210311AC50F8F00B52F95 /* mail_button.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mail_button.jpeg; sourceTree = "<group>"; };
 		377B25CA1AA9DEA300C5E066 /* AirbnbHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirbnbHelper.h; sourceTree = "<group>"; };
 		377B25CB1AA9DEA300C5E066 /* AirbnbHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirbnbHelper.m; sourceTree = "<group>"; };
 		377B25CC1AA9DEA300C5E066 /* AirbnbSessionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirbnbSessionView.swift; sourceTree = "<group>"; };
@@ -106,6 +116,10 @@
 		01D033931A9CC1EA00325163 /* Poli */ = {
 			isa = PBXGroup;
 			children = (
+				372210311AC50F8F00B52F95 /* mail_button.jpeg */,
+				3722102D1AC501EF00B52F95 /* facebook_button.jpg */,
+				372210291AC4FECC00B52F95 /* finish.jpeg */,
+				3722102A1AC4FECC00B52F95 /* twitter_button.jpeg */,
 				377B25C81AA9DEA300C5E066 /* AirbnbViewController */,
 				379C647C1AB5D2F80035B4DB /* sexy.jpeg */,
 				379C647E1AB5D3CB0035B4DB /* cool.jpeg */,
@@ -118,6 +132,7 @@
 				37A976F41AB3EBAE00B32310 /* DrawerMenu2_1_1.swift */,
 				37A976F21AB3EB8300B32310 /* SelectPic2_2.swift */,
 				37A976FA1AB4095600B32310 /* Guide2_3.swift */,
+				372210271AC4FE9D00B52F95 /* Finishi.swift */,
 				01D0339A1A9CC1EA00325163 /* Main.storyboard */,
 				01D0339D1A9CC1EA00325163 /* Images.xcassets */,
 				01D0339F1A9CC1EA00325163 /* LaunchScreen.xib */,
@@ -254,11 +269,15 @@
 			files = (
 				379C64821AB5D3CB0035B4DB /* cute.jpeg in Resources */,
 				01D0339C1A9CC1EA00325163 /* Main.storyboard in Resources */,
+				3722102C1AC4FECC00B52F95 /* twitter_button.jpeg in Resources */,
 				379C64831AB5D3CB0035B4DB /* lovely.jpeg in Resources */,
 				01D033A11A9CC1EA00325163 /* LaunchScreen.xib in Resources */,
+				3722102E1AC501EF00B52F95 /* facebook_button.jpg in Resources */,
 				01D0339E1A9CC1EA00325163 /* Images.xcassets in Resources */,
 				379C647D1AB5D2F80035B4DB /* sexy.jpeg in Resources */,
 				379C64811AB5D3CB0035B4DB /* cool.jpeg in Resources */,
+				372210321AC50F8F00B52F95 /* mail_button.jpeg in Resources */,
+				3722102B1AC4FECC00B52F95 /* finish.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +305,7 @@
 				01D033971A9CC1EA00325163 /* AppDelegate.swift in Sources */,
 				37A976F71AB3EBDC00B32310 /* ProgressProgram.swift in Sources */,
 				377B25D61AA9DEA300C5E066 /* AirbnbHelper.m in Sources */,
+				372210281AC4FE9D00B52F95 /* Finishi.swift in Sources */,
 				37A976F31AB3EB8300B32310 /* SelectPic2_2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
